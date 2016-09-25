@@ -3,7 +3,6 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 <link rel="stylesheet" href="/static/cameraApp/home.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script type="text/javascript" src="{% static 'cameraApp/header.js' %}"></script>
 <!-- Optional theme -->
 <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">-->
 
@@ -199,103 +198,136 @@
 
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="alert alert-info alert-dismissable">
-                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                        <i class="fa fa-info-circle"></i>  <strong>Some Styling</strong>
+                    <!--<div class="alert alert-info alert-dismissable">-->
+                        <!--<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>-->
+                        <!--<i class="fa fa-info-circle"></i>  <strong>Some Styling</strong>-->
+                    <!--</div>-->
+                    <button type="button" class="btn btn-success btn-lg btn-block" id="addNewEntry">Add New Entry</button>
+                    <br>
+
+                    <div class="row" id="newEntryForm" style="display:none;">
+                        <div class="col-lg-12">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title"><i class="fa fa-bar-chart-o fa-fw"></i> Entry Form </h3>
+                                </div>
+                                <div class="panel-body">
+                                    <div class="list-group" id="newFormList">
+                                        <!--<a href="#" class="list-group-item">-->
+                                            <!--<span class="badge">just now</span>-->
+                                            <!--<i class="fa fa-fw fa-calendar"></i> Some task-->
+                                        <!--</a>-->
+                                        <!--<a href="#" class="list-group-item">-->
+                                            <!--<span class="badge">4 minutes ago</span>-->
+                                            <!--<i class="fa fa-fw fa-comment"></i> Another task-->
+                                        <!--</a>-->
+                                        <!--<a href="#" class="list-group-item">-->
+                                            <!--<span class="badge">23 minutes ago</span>-->
+                                            <!--<i class="fa fa-fw fa-truck"></i> Task 3-->
+                                        <!--</a>-->
+                                        <!--<a href="#" class="list-group-item">-->
+                                            <!--<span class="badge">46 minutes ago</span>-->
+                                            <!--<i class="fa fa-fw fa-money"></i> Task 4-->
+                                        <!--</a>-->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+
                 </div>
             </div>
             <!-- /.row -->
 
-            <div class="row">
-                <div class="col-lg-3 col-md-6">
-                    <div class="panel panel-primary">
-                        <div class="panel-heading">
-                            <div class="row">
-                                <div class="col-xs-3">
-                                    <i class="fa fa-comments fa-5x"></i>
-                                </div>
-                                <div class="col-xs-9 text-right">
-                                    <div class="huge">26</div>
-                                    <div>First Box</div>
-                                </div>
-                            </div>
-                        </div>
-                        <a href="#">
-                            <div class="panel-footer">
-                                <span class="pull-left">View Details</span>
-                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                                <div class="clearfix"></div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="panel panel-green">
-                        <div class="panel-heading">
-                            <div class="row">
-                                <div class="col-xs-3">
-                                    <i class="fa fa-tasks fa-5x"></i>
-                                </div>
-                                <div class="col-xs-9 text-right">
-                                    <div class="huge">12</div>
-                                    <div>Second Box</div>
-                                </div>
-                            </div>
-                        </div>
-                        <a href="#">
-                            <div class="panel-footer">
-                                <span class="pull-left">View Details</span>
-                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                                <div class="clearfix"></div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="panel panel-yellow">
-                        <div class="panel-heading">
-                            <div class="row">
-                                <div class="col-xs-3">
-                                    <i class="fa fa-shopping-cart fa-5x"></i>
-                                </div>
-                                <div class="col-xs-9 text-right">
-                                    <div class="huge">124</div>
-                                    <div>Third Box</div>
-                                </div>
-                            </div>
-                        </div>
-                        <a href="#">
-                            <div class="panel-footer">
-                                <span class="pull-left">View Details</span>
-                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                                <div class="clearfix"></div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="panel panel-red">
-                        <div class="panel-heading">
-                            <div class="row">
-                                <div class="col-xs-3">
-                                    <i class="fa fa-support fa-5x"></i>
-                                </div>
-                                <div class="col-xs-9 text-right">
-                                    <div class="huge">13</div>
-                                    <div>Fourth Box</div>
-                                </div>
-                            </div>
-                        </div>
-                        <a href="#">
-                            <div class="panel-footer">
-                                <span class="pull-left">View Details</span>
-                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                                <div class="clearfix"></div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
+            <!--<div class="row">-->
+                <!--<div class="col-lg-3 col-md-6">-->
+                    <!--<div class="panel panel-primary">-->
+                        <!--<div class="panel-heading">-->
+                            <!--<div class="row">-->
+                                <!--<div class="col-xs-3">-->
+                                    <!--<i class="fa fa-comments fa-5x"></i>-->
+                                <!--</div>-->
+                                <!--<div class="col-xs-9 text-right">-->
+                                    <!--<div class="huge">26</div>-->
+                                    <!--<div>First Box</div>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<a href="#">-->
+                            <!--<div class="panel-footer">-->
+                                <!--<span class="pull-left">View Details</span>-->
+                                <!--<span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>-->
+                                <!--<div class="clearfix"></div>-->
+                            <!--</div>-->
+                        <!--</a>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div class="col-lg-3 col-md-6">-->
+                    <!--<div class="panel panel-green">-->
+                        <!--<div class="panel-heading">-->
+                            <!--<div class="row">-->
+                                <!--<div class="col-xs-3">-->
+                                    <!--<i class="fa fa-tasks fa-5x"></i>-->
+                                <!--</div>-->
+                                <!--<div class="col-xs-9 text-right">-->
+                                    <!--<div class="huge">12</div>-->
+                                    <!--<div>Second Box</div>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<a href="#">-->
+                            <!--<div class="panel-footer">-->
+                                <!--<span class="pull-left">View Details</span>-->
+                                <!--<span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>-->
+                                <!--<div class="clearfix"></div>-->
+                            <!--</div>-->
+                        <!--</a>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div class="col-lg-3 col-md-6">-->
+                    <!--<div class="panel panel-yellow">-->
+                        <!--<div class="panel-heading">-->
+                            <!--<div class="row">-->
+                                <!--<div class="col-xs-3">-->
+                                    <!--<i class="fa fa-shopping-cart fa-5x"></i>-->
+                                <!--</div>-->
+                                <!--<div class="col-xs-9 text-right">-->
+                                    <!--<div class="huge">124</div>-->
+                                    <!--<div>Third Box</div>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<a href="#">-->
+                            <!--<div class="panel-footer">-->
+                                <!--<span class="pull-left">View Details</span>-->
+                                <!--<span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>-->
+                                <!--<div class="clearfix"></div>-->
+                            <!--</div>-->
+                        <!--</a>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div class="col-lg-3 col-md-6">-->
+                    <!--<div class="panel panel-red">-->
+                        <!--<div class="panel-heading">-->
+                            <!--<div class="row">-->
+                                <!--<div class="col-xs-3">-->
+                                    <!--<i class="fa fa-support fa-5x"></i>-->
+                                <!--</div>-->
+                                <!--<div class="col-xs-9 text-right">-->
+                                    <!--<div class="huge">13</div>-->
+                                    <!--<div>Fourth Box</div>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<a href="#">-->
+                            <!--<div class="panel-footer">-->
+                                <!--<span class="pull-left">View Details</span>-->
+                                <!--<span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>-->
+                                <!--<div class="clearfix"></div>-->
+                            <!--</div>-->
+                        <!--</a>-->
+                    <!--</div>-->
+                <!--</div>-->
             </div>
             <!-- /.row -->
 
@@ -306,7 +338,24 @@
                             <h3 class="panel-title"><i class="fa fa-bar-chart-o fa-fw"></i> Full panel</h3>
                         </div>
                         <div class="panel-body">
-                            <div id="morris-area-chart"></div>
+                            <div class="list-group">
+                                <a href="#" class="list-group-item">
+                                    <span class="badge">just now</span>
+                                    <i class="fa fa-fw fa-calendar"></i> Some task
+                                </a>
+                                <a href="#" class="list-group-item">
+                                    <span class="badge">4 minutes ago</span>
+                                    <i class="fa fa-fw fa-comment"></i> Another task
+                                </a>
+                                <a href="#" class="list-group-item">
+                                    <span class="badge">23 minutes ago</span>
+                                    <i class="fa fa-fw fa-truck"></i> Task 3
+                                </a>
+                                <a href="#" class="list-group-item">
+                                    <span class="badge">46 minutes ago</span>
+                                    <i class="fa fa-fw fa-money"></i> Task 4
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -444,5 +493,7 @@
 <!-- /#wrapper -->
 
 </body>
+<script type="text/javascript" src="{% static 'cameraApp/header.js' %}"></script>
+
 
 </html>

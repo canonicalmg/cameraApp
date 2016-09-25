@@ -2,7 +2,10 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.template import loader
 from django.contrib.auth.models import User
 #from .models import profile, profilePhotos, profilePrimaryPic, wallPost, postComment, postLike
+from .models import question
 from django.contrib.auth import authenticate,login, logout
+from django.core import serializers
+import json
 
 def signUpLogIn(request):
     if request.user.is_authenticated():
@@ -40,4 +43,18 @@ def headerSignOut(request):
         return HttpResponse("return this string")
     else:
         return HttpResponseRedirect("/")
+
+def getQuestions(request):
+    if request.is_ajax():
+        if request.method == "GET":
+            leads_as_json = serializers.serialize('json', question.objects.all())
+            return HttpResponse(leads_as_json, content_type='json')
+
+def sendNewEntry(request):
+    if request.is_ajax():
+        if request.method == "POST":
+            data = request.POST.getlist("data[]")
+            print data
+            print "entered ", data
+            return HttpResponse("return this string")
 
